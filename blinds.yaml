@@ -3,59 +3,59 @@ blinds:
     description: "One"
     actions:
       up:
-        filename: "1_up.txt"
+        filename: "data/1_up.txt"
         start: 1000
         stop: 2000
       down:
-        filename: "1_down.txt"
+        filename: "data/1_down.txt"
         start: 1000
         stop: 1800
       stop:
-        filename: "1_stop.txt"
+        filename: "data/1_stop.txt"
         start: 600
         stop: 1000
   - name: two
     description: "Two"
     actions:
       up:
-        filename: "2.txt"
+        filename: "data/2.txt"
         start: 900
         stop: 1400
       down:
-        filename: "2.txt"
+        filename: "data/2.txt"
         start: 4500
         stop: 6000
       stop:
-        filename: "2.txt"
+        filename: "data/2.txt"
         start: 3400
         stop: 4200
   - name: three
     description: "Three"
     actions:
       up:
-        filename: "3.txt"
+        filename: "data/3.txt"
         start: 800
         stop: 1000
       down:
-        filename: "3.txt"
+        filename: "data/3.txt"
         start: 5100
         stop: 5300
       stop:
-        filename: "3.txt"
+        filename: "data/3.txt"
         start: 2900
         stop: 3100
   - name: four
     description: "Four"
     actions:
       up:
-        filename: "4.txt"
+        filename: "data/4.txt"
         start: 7700
         stop: 8000
       down:
-        filename: "4.txt"
+        filename: "data/4.txt"
         start: 1000
         stop: 1200
       stop:
-        filename: "4.txt"
+        filename: "data/4.txt"
         start: 11000
         stop: 11200

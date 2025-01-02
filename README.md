@@ -76,6 +76,7 @@ Once you started the api server, just point your browser to http://ip-of-your-rp
 - **replay.py**: Script to replay recorded 433MHz signals.
 - **api.py**: API server to control blinds using the recorded signals.
 - **blinds.yaml**: Configuration file for blinds, specifying the actions and corresponding signal files.
+- **data** / **scripts** sub-directories: recordings and replay scripts from/for my AC-123-06D remote
 
 ## Contributing
 
