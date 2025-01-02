@@ -1,0 +1,49 @@
+backup/
+homeassistant/
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+
+# Distribution and packaging
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# Test coverage and reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+*.cover
+*.log
+.cache/
+
+# Pytest files
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
+*.~lock.*
+
+# Secrets
+.env
