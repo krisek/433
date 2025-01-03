@@ -103,6 +103,7 @@ def replay_signal(
 
     logger.info(f"Transmitting signal for {blind_name} from {filename} on GPIO {gpio_pin} / {start_at} / {stop_at}")
     print(f"Transmitting signal for {blind_name} from {filename} on GPIO {gpio_pin} / {start_at[0]} / {stop_at[0]}")
+    
     for i in range(repeat):
         try:
             with open(filename, "r") as file:
@@ -125,15 +126,17 @@ def replay_signal(
                 GPIO.output(gpio_pin, GPIO.LOW)
                 time.sleep(low_duration)
 
-            return {"message": f"Signal transmission for {blind_name} completed."}
-
         except FileNotFoundError:
             logger.error(f"File {filename} not found.")
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Signal file not found")
         except Exception as e:
             logger.error(f"An error occurred: {e}")
             raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
-        time.sleep(0.5)
+        if(repeat > 1):
+            time.sleep(0.2)
+    
+    return {"message": f"Signal transmission {action} x {repeat} for {blind_name} completed."}
+
 #    finally:
 #        GPIO.cleanup()
 #        logger.info("GPIO cleanup completed.")

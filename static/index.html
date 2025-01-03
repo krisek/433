@@ -43,7 +43,7 @@
         // Helper function to call the API for controlling blinds
         function callApi(action, blind) {
             const url = `${BASE_URL}/replay_signal?blind_name=${blind}&action=${action}`;
-
+            $('#response').text('Calling API: ' + blind + ' ' + action);
             $.ajax({
                 url: url,
                 type: 'POST',
