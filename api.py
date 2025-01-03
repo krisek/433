@@ -87,6 +87,7 @@ def replay_signal(
             start_at = blind['actions'][action].get("start", 0),
             stop_at = blind['actions'][action].get("stop", None),
             filename = blind['actions'][action]['filename']
+            repeat = blind['actions'][action].get("repeat", 1)
             break
 
             
@@ -102,7 +103,7 @@ def replay_signal(
 
     logger.info(f"Transmitting signal for {blind_name} from {filename} on GPIO {gpio_pin} / {start_at} / {stop_at}")
     print(f"Transmitting signal for {blind_name} from {filename} on GPIO {gpio_pin} / {start_at[0]} / {stop_at[0]}")
-    for i in range(3):
+    for i in range(repeat):
         try:
             with open(filename, "r") as file:
                 signal_data = [line.strip().split(",") for line in file]
