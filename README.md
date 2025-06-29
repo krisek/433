@@ -6,7 +6,7 @@ The inspiration for this project came from https://carson.fenimorefamily.com/?p=
 
 ## API server
 
-The API is only a reference implementation to replicate the functionality of a AC-123-06D remote controlling my blinds/shutters, but it can be easily adopted to control any other devices.
+The API is only a reference implementation to replicate the functionality of an AC-123-06D remote controlling my blinds/shutters, but it can be easily adopted to control any other devices.
 
 ## Installation Instructions
 
@@ -18,7 +18,7 @@ The API is only a reference implementation to replicate the functionality of a A
 
 2. **Install the required libraries:**
    ```bash
-   sudo apt install python3-fastapi python3-mathplotlib python3-rpi-lgpio
+   sudo apt install python3-fastapi python3-matplotlib python3-rpi-lgpio
    ```
 
 3. **Set up the GPIO:**
@@ -68,7 +68,7 @@ The API server provides the following endpoints:
 - `POST /login` or `GET /login`: Get an access token
 - all other requests will be tried to be served from the static sub-direcotry
 
-Once you started the api server, just point your browser to http://ip-of-your-rpi:8080 and the fronted will be served.
+Once you started the api server, just point your browser to http://ip-of-your-rpi:8080 and the frontend will be served.
 
 ## Files Description
 
